@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Acceso mediante enlace secreto de 192 bits y sesión anónima.
+    // No se permite listar viajes. Todos los invitados pueden editar.
+    match /trips/{tripId} {
+      allow get: if request.auth != null && tripId.matches('^[a-f0-9]{48}$');
+      allow list, delete: if false;
+      allow create, update: if request.auth != null
+        && tripId.matches('^[a-f0-9]{48}$')
+        && request.resource.data.keys().hasOnly(['data', 'updatedAt'])
+        && request.resource.data.updatedAt == request.time
+        && request.resource.data.data.keys().hasOnly(['families', 'expenses', 'payments'])
+        && request.resource.data.data.families is list
+        && request.resource.data.data.families.size() <= 50
+        && request.resource.data.data.expenses is list
+        && request.resource.data.data.expenses.size() <= 1000
+        && request.resource.data.data.payments is list
+        && request.resource.data.data.payments.size() <= 1000;
+    }
+  }
+}
