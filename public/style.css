@@ -12,4 +12,17 @@ button:disabled{cursor:not-allowed}
 .locations-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.location-card .stat-icon{margin-bottom:18px}.location-coordinates{font-variant-numeric:tabular-nums;font-size:13px;overflow-wrap:anywhere}.location-links{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:24px}.location-links a{font-weight:600;text-decoration:none;border-radius:10px;min-height:44px;display:inline-flex;align-items:center}.location-links a:not(.primary){color:var(--ink)}a:focus-visible{outline:2px solid #9688d0;outline-offset:3px}.location-shortcut{position:relative;z-index:1;margin-top:10px;background:#ffffffc9}.trip-banner .location-shortcut{font-size:12px}@media(max-width:700px){.locations-grid{grid-template-columns:1fr;gap:0}.sidebar nav button{min-width:0;font-size:8px}.location-links{gap:16px}}
 
 .sidebar .nav-icon{width:24px;height:24px;flex-shrink:0}.sidebar nav button>.nav-label{font-size:inherit;width:auto;text-align:left}.sidebar nav button.active:hover{background:var(--lime)}
-@media(max-width:700px){.sidebar{height:calc(70px + env(safe-area-inset-bottom,0px));padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}.sidebar nav{height:54px;gap:5px}.sidebar nav button{justify-content:center;padding:10px 0;min-width:44px;min-height:44px;gap:0}.sidebar nav button>.nav-label{display:none}.sidebar .nav-icon{width:28px;height:28px}.workspace{padding-bottom:calc(85px + env(safe-area-inset-bottom,0px))}#toast{bottom:calc(85px + env(safe-area-inset-bottom,0px))}}
+/* Barra móvil flotante, siguiendo la navegación de Laponia. */
+@media(max-width:700px){
+ .sidebar{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom,0px));width:auto;height:76px;padding:6px;border:1px solid rgba(23,105,168,.12);border-radius:28px;background:rgba(255,255,255,.96);box-shadow:0 12px 36px rgba(12,44,70,.17);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:visible}
+ .sidebar nav{height:100%;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;gap:0}
+ .sidebar nav button{position:relative;display:flex;align-items:center;justify-content:center;height:62px;min-height:44px;min-width:44px;padding:0;gap:0;border-radius:20px;background:transparent;color:#536b80;transition:none}
+ .sidebar nav button:hover{background:#eef4fa;color:#1769a8}
+ .sidebar nav button.active,.sidebar nav button.active:hover{background:transparent;color:#1769a8}
+ .sidebar nav button>.nav-label{display:none}
+ .sidebar .nav-icon{box-sizing:content-box;width:25px;height:25px;padding:9px;border-radius:15px;flex-shrink:0}
+ .sidebar nav button.active .nav-icon{background:#1769a8;color:#fff;box-shadow:0 8px 18px rgba(23,105,168,.32);transform:translateY(-9px)}
+ .sidebar nav button.active::after{content:'';position:absolute;bottom:6px;width:5px;height:5px;border-radius:50%;background:#1769a8}
+ .workspace{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+ #toast{bottom:calc(105px + env(safe-area-inset-bottom,0px))}
+}
