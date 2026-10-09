@@ -9,7 +9,8 @@ Aplicación en español para compartir los gastos de siete familias y 26 viajero
 3. Añade concepto, importe, fecha, categoría, pagador y participantes. El reparto predeterminado es igual entre familias; opcionalmente puede ponderarse por personas.
 4. Consulta saldos y registra las transferencias **después de realizarlas**. El registro no envía dinero. Puedes anularlo.
 5. Comparte la dirección de la web y, por separado, la palabra. Todos entran al mismo viaje.
-6. En «Compartir y copias» puedes descargar JSON/CSV, restaurar JSON y cerrar sesión.
+6. En «Ubicaciones» encontrarás la casa y el punto de acceso, con enlaces para verlos en Google Maps o pedir indicaciones. También hay un acceso desde el resumen.
+7. En «Compartir y copias» puedes descargar JSON/CSV, restaurar JSON y cerrar sesión.
 
 Los importes se guardan en céntimos enteros. Las siete familias iniciales y sus integrantes se conservan; se pueden añadir familias adicionales. El reparto histórico no cambia al editar el número de personas de una familia adicional.
 
