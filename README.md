@@ -2,11 +2,18 @@
 
 Aplicación en español para compartir los gastos de siete familias y 26 viajeros. HTML, CSS y módulos JavaScript; no necesita compilación ni dependencias en producción.
 
+## Retomar el proyecto
+
+1. Consulta [el estado al pausar](docs/estado.md). Clona el repositorio si hace falta (`git clone https://github.com/alvarocamba/la-loma-de-la-higuera-app.git`), entra en la carpeta y actualiza `main` con `git switch main` y `git pull --ff-only`.
+2. Abre [La Loma](https://la-loma-de-la-higuera-app.web.app/), pide **la palabra de acceso vigente al grupo por privado** si no la tienes y elige tu familia. La palabra no se guarda en este repositorio público. Si hay que cambiarla, sigue el procedimiento de [configuración de acceso](#configurar-o-cambiar-la-palabra) para conservar el viaje existente.
+3. Revisa «Saldos y pagos» y descarga una **copia JSON actual** en «Compartir y copias». Git no contiene los datos del viaje. Conserva esa copia en privado; usa «Restaurar copia» solo si hace falta recuperar datos, porque sustituye el viaje actual.
+4. Para seguir desarrollando, usa los comandos de [desarrollo y pruebas](#desarrollo-y-pruebas). Si hay que publicar cambios de la web, ejecuta `firebase deploy --only hosting --project la-loma-de-la-higuera-app` desde la raíz del repo tras pasar las pruebas. Publica las reglas de Firestore por separado solo si cambian.
+
 ## Uso
 
 1. Abre la web e introduce la palabra del grupo.
 2. Elige tu familia. Esta elección personaliza el panel, pero permite registrar gastos pagados por cualquier familia.
-3. Añade concepto, importe, fecha, categoría, pagador y participantes. El reparto predeterminado es igual entre familias; opcionalmente puede ponderarse por personas.
+3. Añade concepto, importe, fecha, categoría, pagador y participantes. El reparto predeterminado es igual entre familias; opcionalmente puede ponderarse por personas, contando a todos por igual o a los niños como 0,5. En «Saldos y pagos» se puede aplicar este último criterio a todos los gastos conservando sus participantes y los pagos registrados; se descarga antes una copia de seguridad.
 4. Consulta saldos y registra las transferencias **después de realizarlas**. El registro no envía dinero. Puedes anularlo.
 5. Comparte la dirección de la web y, por separado, la palabra. Todos entran al mismo viaje.
 6. En «Ubicaciones» encontrarás la casa y el punto de acceso, con enlaces para verlos en Google Maps o pedir indicaciones. También hay un acceso desde el resumen.

@@ -1,6 +1,6 @@
 export function split(cents, families, mode='equal') {
   if (!Number.isSafeInteger(cents) || cents <= 0 || !families.length) throw Error('Importe o participantes no válidos');
-  const weights = families.map(f => mode === 'people' ? f.people : 1);
+  const weights = families.map(f => mode === 'children-half' ? f.people + (f.adults ?? f.people) : mode === 'people' ? f.people : 1);
   if (weights.some(w => !Number.isInteger(w) || w < 1)) throw Error('Número de personas no válido');
   const sum = weights.reduce((a,b)=>a+b,0);
   const parts = weights.map(w=>Math.floor(cents*w/sum));

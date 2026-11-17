@@ -1,0 +1,8 @@
+# Estado al pausar · 17 de noviembre de 2026
+
+- **Objetivo:** gestionar los gastos de La Loma de la Higuera entre 7 familias (26 personas), repartirlos y proponer cómo saldar las cuentas.
+- **Rama:** `main`, con `origin/main` como remoto de trabajo. GitHub guarda el código; Firebase Hosting sirve la app y Firestore guarda los gastos y pagos.
+- **Decisiones:** Firebase Spark, acceso por palabra del grupo y selección de familia; importes en céntimos. Los gastos nuevos se reparten por defecto a partes iguales entre familias. También se pueden repartir por personas y aplicar a todos los gastos el criterio de adulto = 1 y niño = 0,5, conservando participantes y pagos registrados.
+- **Probado:** el recorrido original está en [VERIFICATION.md](../VERIFICATION.md). El 13 de octubre se aplicó y verificó en la app el reparto ponderado de los 11 gastos (1.652,43 €): seis transferencias, el mínimo para esos saldos, y ninguna registrada entonces. El 17 de noviembre pasaron las 10 pruebas unitarias y la comprobación de sintaxis.
+- **Pendiente:** registrar solo las transferencias que se hayan hecho realmente; el estado de esos pagos no se volvió a consultar al archivar. Conviene guardar una copia JSON actual del viaje fuera de Git.
+- **Primer paso al volver:** actualizar `main`, abrir la app y comprobar «Saldos y pagos» contra las transferencias reales. Antes de editar o restaurar datos, descargar una copia JSON. Consulta [cómo retomar el proyecto](../README.md#retomar-el-proyecto).
