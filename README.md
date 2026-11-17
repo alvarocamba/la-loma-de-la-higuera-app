@@ -9,10 +9,10 @@ Aplicación en español para compartir los gastos de siete familias y 26 viajero
 3. Revisa «Saldos y pagos» y descarga una **copia JSON actual** en «Compartir y copias». Git no contiene los datos del viaje. Conserva esa copia en privado; usa «Restaurar copia» solo si hace falta recuperar datos, porque sustituye el viaje actual.
 4. Para seguir desarrollando, usa los comandos de [desarrollo y pruebas](#desarrollo-y-pruebas). Si hay que publicar cambios de la web, ejecuta `firebase deploy --only hosting --project la-loma-de-la-higuera-app` desde la raíz del repo tras pasar las pruebas. Publica las reglas de Firestore por separado solo si cambian.
 
-### Dónde guardar la copia privada
+### Dónde está la copia privada
 
-- **Ubicación recomendada en Google Drive:** `Mi unidad / La Loma / Copias privadas / la-loma-2026-11-17.json`. Crea la carpeta en tu unidad personal y comprueba que el acceso general esté en **Restringido** y que no herede permisos de una carpeta compartida.
-- **Copia local verificada:** `.firebase/respaldo-viaje/la-loma-2026-11-17.json`, dentro del clon local. Git la ignora: no se descarga al clonar el repo. Copia el archivo a la ruta de Drive antes de borrar el clon. La ruta de Drive es el destino recomendado; la subida no se ha verificado.
+- **Google Drive:** `Mi unidad / La Loma / Copias privadas / la-loma-2026-11-17.json`. Copia guardada el 18 de noviembre de 2026 y verificada con acceso restringido al propietario. Contiene 11 gastos y 6 pagos registrados. Para recuperarla, abre esa ruta desde la cuenta propietaria y descarga el JSON.
+- **Copia local:** `.firebase/respaldo-viaje/la-loma-2026-11-17.json`, dentro del clon original. Git la ignora y la copia de Drive seguirá disponible si se elimina el clon.
 
 ## Uso
 
