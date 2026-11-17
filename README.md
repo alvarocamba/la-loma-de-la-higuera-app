@@ -11,7 +11,7 @@ Aplicación en español para compartir los gastos de siete familias y 26 viajero
 
 ### Dónde está la copia privada
 
-- **Google Drive:** `Mi unidad / La Loma / Copias privadas / la-loma-2026-11-17.json`. Copia guardada el 18 de noviembre de 2026 y verificada con acceso restringido al propietario. Contiene 11 gastos y 6 pagos registrados. Para recuperarla, abre esa ruta desde la cuenta propietaria y descarga el JSON.
+- **Google Drive:** `Mi unidad / Copias de apps personales / La Loma / Copias privadas / la-loma-2026-11-17.json`. Copia guardada el 18 de noviembre de 2026 y verificada con acceso restringido al propietario. Contiene 11 gastos y 6 pagos registrados. Para recuperarla, abre esa ruta desde la cuenta propietaria y descarga el JSON.
 - **Copia local:** `.firebase/respaldo-viaje/la-loma-2026-11-17.json`, dentro del clon original. Git la ignora y la copia de Drive seguirá disponible si se elimina el clon.
 
 ## Uso
